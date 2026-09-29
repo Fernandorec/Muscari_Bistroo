@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Reservaciones y eventos — Muscari Bistro</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&amp;display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@500,700&amp;display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#F2EBDF;color:#2B241E;font-family:Satoshi,'DM Sans',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+a:hover{color:inherit}
+img{display:block;max-width:100%}
+@keyframes mFade{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes mZoom{from{transform:scale(1.12)}to{transform:scale(1)}}
+@keyframes mReveal{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</helmet>
+
+<header style="position:absolute;top:0;left:0;right:0;z-index:10;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px;padding:24px clamp(20px,4vw,48px);color:#F2EBDF;animation:mFade 1s cubic-bezier(.25,.46,.45,.94) both">
+  <a href="Inicio.dc.html" style="font-size:15px;font-weight:700;letter-spacing:.32em">MUSCARI</a>
+  <nav style="display:flex;flex-wrap:wrap;gap:8px 28px;font-size:13px;text-transform:uppercase;letter-spacing:.04em">
+    <a href="Inicio.dc.html" style="padding-bottom:4px;border-bottom:1px solid transparent;transition:border-color .4s" style-hover="border-bottom-color:#F2EBDF">Inicio</a>
+    <a href="Menu.dc.html" style="padding-bottom:4px;border-bottom:1px solid transparent;transition:border-color .4s" style-hover="border-bottom-color:#F2EBDF">Menú</a>
+    <a href="Eventos.dc.html" style="padding-bottom:4px;border-bottom:1px solid transparent;transition:border-color .4s" style-hover="border-bottom-color:#F2EBDF">Eventos</a>
+    <a href="Reservas.dc.html" style="padding-bottom:4px;border-bottom:1px solid #B5613C">Reservas</a>
+  </nav>
+  <a href="#mesa" style="font-size:13px;text-transform:uppercase;letter-spacing:.04em;padding:14px 22px;border:1px solid #F2EBDF;border-radius:3px;transition:background .4s,color .4s" style-hover="background:#F2EBDF;color:#211C17">Reservar mesa</a>
+</header>
+
+<main>
+  <section data-screen-label="Reservas — Hero" style="position:relative;min-height:max(64vh,520px);overflow:hidden;background:#211C17;color:#F2EBDF;display:flex;flex-direction:column;justify-content:flex-end">
+    <img src="assets/images/terraza.jpg" alt="Terraza de Muscari con sillones rojos y lámparas de papel" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%;animation:mZoom 8s cubic-bezier(.25,.46,.45,.94) both">
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(33,28,23,.6) 0%,rgba(33,28,23,.2) 40%,rgba(33,28,23,.85) 100%)"></div>
+    <div style="position:relative;padding:0 clamp(20px,4vw,48px) clamp(32px,5vw,56px);display:flex;flex-direction:column;gap:20px;animation:mFade 1.2s .3s cubic-bezier(.25,.46,.45,.94) both">
+      <span style="font-size:12px;text-transform:uppercase;letter-spacing:.14em">Reservaciones y eventos</span>
+      <h1 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(64px,11vw,170px);line-height:.8;letter-spacing:-0.04em;text-transform:uppercase">Reserva<br>tu momento</h1>
+    </div>
+  </section>
+
+  <section data-screen-label="Reservas — Selector" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))">
+    <a href="#mesa" style="position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:420px;overflow:hidden;color:#F2EBDF;background:#211C17">
+      <img src="assets/images/salon-te.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55;transition:transform 1.2s cubic-bezier(.25,.46,.45,.94),opacity .6s" style-hover="transform:scale(1.05);opacity:.7">
+      <div style="position:relative;display:flex;flex-direction:column;gap:18px;padding:clamp(28px,4vw,48px);pointer-events:none">
+        <span style="font-size:12px;text-transform:uppercase;letter-spacing:.14em">01 · Mesa</span>
+        <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(44px,5vw,72px);line-height:.88;letter-spacing:-0.03em;text-transform:uppercase">Una mesa para compartir</h2>
+        <p style="margin:0;font-size:15px;line-height:1.5;max-width:380px">Encuentra el momento perfecto para disfrutar de Muscari.</p>
+        <span style="align-self:flex-start;font-size:13px;text-transform:uppercase;letter-spacing:.04em;padding:16px 24px;border:1px solid #F2EBDF;border-radius:3px">Reservar mesa ↓</span>
+      </div>
+    </a>
+    <a href="#evento" style="position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:420px;overflow:hidden;color:#F2EBDF;background:#4D5E3A">
+      <img src="assets/images/jardin-hamaca.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.4;mix-blend-mode:luminosity;transition:transform 1.2s cubic-bezier(.25,.46,.45,.94),opacity .6s" style-hover="transform:scale(1.05);opacity:.55">
+      <div style="position:relative;display:flex;flex-direction:column;gap:18px;padding:clamp(28px,4vw,48px);pointer-events:none">
+        <span style="font-size:12px;text-transform:uppercase;letter-spacing:.14em">02 · Evento</span>
+        <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(44px,5vw,72px);line-height:.88;letter-spacing:-0.03em;text-transform:uppercase">Un espacio para celebrar</h2>
+        <p style="margin:0;font-size:15px;line-height:1.5;max-width:380px">Organiza una experiencia especial en Muscari.</p>
+        <span style="align-self:flex-start;font-size:13px;text-transform:uppercase;letter-spacing:.04em;padding:16px 24px;border:1px solid #F2EBDF;border-radius:3px">Organizar evento ↓</span>
+      </div>
+    </a>
+  </section>
+
+  <section id="mesa" data-screen-label="Reservas — Mesa" style="scroll-margin-top:0;max-width:1440px;margin:0 auto;padding:clamp(88px,11vw,150px) clamp(20px,4vw,48px);display:flex;flex-wrap:wrap;gap:48px clamp(40px,6vw,96px);align-items:flex-start">
+    <div style="flex:1 1 320px;display:flex;flex-direction:column;gap:28px;position:sticky;top:32px">
+      <span style="font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:#B5613C">01 · Reservar una mesa</span>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(48px,6vw,90px);line-height:.84;letter-spacing:-0.04em;text-transform:uppercase">Una mesa para compartir</h2>
+      <p style="margin:0;max-width:400px;font-size:15px;line-height:1.5;color:#5A4636;text-wrap:pretty">Elige el día y la hora en el calendario de Muscari. La disponibilidad y la confirmación llegan directamente desde Google Calendar.</p>
+      <ol style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;border-top:1px solid #CDBFA8">
+        <li style="display:grid;grid-template-columns:40px 1fr;gap:12px;padding:16px 0;border-bottom:1px solid #CDBFA8;font-size:14px;line-height:1.45"><span style="color:#B5613C">01</span><span>Selecciona una fecha disponible.</span></li>
+        <li style="display:grid;grid-template-columns:40px 1fr;gap:12px;padding:16px 0;border-bottom:1px solid #CDBFA8;font-size:14px;line-height:1.45"><span style="color:#B5613C">02</span><span>Elige el horario que prefieras.</span></li>
+        <li style="display:grid;grid-template-columns:40px 1fr;gap:12px;padding:16px 0;border-bottom:1px solid #CDBFA8;font-size:14px;line-height:1.45"><span style="color:#B5613C">03</span><span>Completa tus datos y confirma la reserva.</span></li>
+      </ol>
+      <div style="display:flex;flex-direction:column;gap:6px;font-size:13px;color:#5A4636">
+        <span>Horario: lunes a sábado, 7:00 a.m. – 7:30 p.m.</span>
+        <span>¿No carga el calendario? <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ32_IWdo7S6swnHhVU4yeTxNlvN7qTmzqZwj4WdPY9DfFQkOGaq33JTDdn07I5WOysowEVEAxfb" target="_blank" rel="noopener" style="color:#2B241E;border-bottom:1px solid #B5613C">Ábrelo en Google Calendar ↗</a></span>
+      </div>
+    </div>
+    <div style="flex:2 1 560px;min-width:0;display:flex;flex-direction:column;gap:12px">
+      <div style="background:#FFFFFF;border:1px solid #CDBFA8;overflow:hidden">
+        <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ32_IWdo7S6swnHhVU4yeTxNlvN7qTmzqZwj4WdPY9DfFQkOGaq33JTDdn07I5WOysowEVEAxfb?gv=true" title="Reservar una mesa en Muscari — Google Calendar" width="100%" height="1080" loading="lazy" style="display:block;width:100%;height:1080px;border:0">Cargando calendario de reservaciones…</iframe>
+      </div>
+      <span style="font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:#8A7A66">Servicio de reservas de Google Calendar</span>
+    </div>
+  </section>
+
+  <section id="evento" data-screen-label="Reservas — Evento" style="scroll-margin-top:0;background:#4D5E3A;color:#F2EBDF">
+    <div style="max-width:1440px;margin:0 auto;padding:clamp(88px,11vw,150px) clamp(20px,4vw,48px);display:flex;flex-wrap:wrap;gap:48px clamp(40px,6vw,96px);align-items:flex-start">
+      <div style="flex:1 1 320px;display:flex;flex-direction:column;gap:28px;position:sticky;top:32px">
+        <span style="font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:#D9D3BC">02 · Organizar un evento</span>
+        <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(48px,6vw,90px);line-height:.84;letter-spacing:-0.04em;text-transform:uppercase">Un espacio para celebrar</h2>
+        <p style="margin:0;max-width:400px;font-size:15px;line-height:1.5;color:#E6DAC6;text-wrap:pretty">Cumpleaños, reuniones o encuentros especiales entre el jardín y el salón. Cuéntanos qué imaginas y el equipo de Muscari se pondrá en contacto contigo.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <div style="overflow:hidden;aspect-ratio:3/4"><img src="assets/images/mesa-eventos.jpg" alt="Mesa preparada para un evento con plato de vidrio y servilleta con lazo" style="width:100%;height:100%;object-fit:cover;object-position:30% 45%;transition:transform 1.2s cubic-bezier(.25,.46,.45,.94)" style-hover="transform:scale(1.06)"></div>
+          <div style="overflow:hidden;aspect-ratio:3/4;margin-top:40px"><img src="assets/images/jardin-mesa.jpg" alt="Mesa para dos en el jardín, frente a un muro de hiedra" style="width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.25,.46,.45,.94)" style-hover="transform:scale(1.06)"></div>
+        </div>
+        <span style="font-size:13px;color:#E6DAC6">¿No carga el formulario? <a href="https://docs.google.com/forms/d/e/1FAIpQLSco2Gbp21eDQjRBmW6Jm8Canebc2FEn5BtoxBMST_vroby5iA/viewform" target="_blank" rel="noopener" style="color:#F2EBDF;border-bottom:1px solid #F2EBDF">Ábrelo en Google Forms ↗</a></span>
+      </div>
+      <div style="flex:2 1 560px;min-width:0;display:flex;flex-direction:column;gap:12px">
+        <div style="background:#F2EBDF;overflow:hidden">
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSco2Gbp21eDQjRBmW6Jm8Canebc2FEn5BtoxBMST_vroby5iA/viewform?embedded=true" title="Solicitar organización de evento en Muscari" width="100%" height="1500" loading="lazy" style="display:block;width:100%;height:1500px;border:0">Cargando formulario de eventos…</iframe>
+        </div>
+        <span style="font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:#D9D3BC">Formulario de Google Forms</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer style="background:#211C17;color:#E6DAC6">
+  <div style="max-width:1440px;margin:0 auto;padding:clamp(56px,7vw,88px) clamp(20px,4vw,48px) 32px;display:flex;flex-direction:column;gap:48px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:40px">
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <img src="assets/images/logo.jpg" alt="Logotipo de Muscari" style="width:96px;height:96px;border-radius:50%">
+        <span style="font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:#B5A994">Culte tea house and afters</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
+        <span style="font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:#B5A994">Horario</span>
+        <span>Lunes a sábado</span>
+        <span>7:00 a.m. – 7:30 p.m.</span>
+        <span style="color:#B5A994">San Salvador, El Salvador</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
+        <span style="font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:#B5A994">Navegación</span>
+        <a href="Inicio.dc.html" style-hover="color:#B5613C">Inicio</a>
+        <a href="Menu.dc.html" style-hover="color:#B5613C">Menú</a>
+        <a href="Eventos.dc.html" style-hover="color:#B5613C">Eventos</a>
+        <a href="Reservas.dc.html" style-hover="color:#B5613C">Reservas</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
+        <span style="font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:#B5A994">Redes</span>
+        <a href="https://www.instagram.com/muscari.bistro/" target="_blank" rel="noopener" style-hover="color:#B5613C">Instagram — @muscari.bistro</a>
+        <a href="https://www.facebook.com/muscarisv/?locale=es_LA" target="_blank" rel="noopener" style-hover="color:#B5613C">Facebook — Muscari</a>
+      </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-top:20px;border-top:1px solid #3a322a;font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:#B5A994">
+      <span>Bistro franco-japonais</span>
+      <span>© 2026 Muscari Bistro</span>
+    </div>
+  </div>
+</footer>
+</x-dc>
+</body>
+</html>
