@@ -1,0 +1,159 @@
+/* ========================================
+   HEADER
+======================================== */
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 10;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 16px 32px;
+
+  padding: 24px clamp(20px, 4vw, 48px);
+
+  color: #F2EBDF;
+
+  animation: mFade 1s
+}
+
+
+/* @keyframes mFade {
+
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+
+} */
+
+.header_logo {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+}
+
+
+.header_nav {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px 28px;
+
+  font-size: 13px;
+
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+
+.nav_link {
+  padding-bottom: 4px;
+
+  border-bottom: 1px solid transparent;
+
+  transition: border-color 0.4s;
+}
+
+
+.nav_link:hover {
+  border-bottom-color: #F2EBDF;
+}
+
+
+.nav_link_activo {
+  border-bottom-color: #B5613C;
+}
+
+
+.boton_reservar {
+  padding: 14px 22px;
+
+  font-size: 13px;
+
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+
+  border: 1px solid #F2EBDF;
+  border-radius: 3px;
+
+  transition:
+    background 0.4s,
+    color 0.4s;
+}
+
+
+.boton_reservar:hover {
+  background: #F2EBDF;
+  color: #211C17;
+}
+
+/* ========================================
+   ANIMACIONES
+======================================== */
+
+@keyframes mFade {
+
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+
+}
+
+@keyframes mZoom {
+
+  from {
+    transform: scale(1.12);
+  }
+
+  to {
+    transform: scale(1);
+  }
+
+}
+
+@keyframes mReveal {
+
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+
+}
+
+@keyframes mPulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.35;
+  }
+
+}
+
