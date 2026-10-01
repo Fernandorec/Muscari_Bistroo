@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Reservaciones y eventos — Muscari Bistro</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    href="https://api.fontshare.com/v2/css?f[]=satoshi@500,700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/reservas.css">
+  <link rel="stylesheet" href="css/global.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+  <header class="header">
+
+    <a href="Inicio.html" class="header_logo">
+      MUSCARI
+    </a>
+
+    <nav class="header_nav">
+
+      <a href="Inicio.html" class="nav_link">
+        Inicio
+      </a>
+
+      <a href="Menu.html" class="nav_link">
+        Menú
+      </a>
+
+      <a href="Eventos.html" class="nav_link">
+        Eventos
+      </a>
+
+      <a href="Reservas.html" class="nav_link nav_link_activo">
+        Reservas
+      </a>
+
+    </nav>
+
+    <a href="Reservas.html#mesa" class="boton_reservar">
+      Reservar mesa
+    </a>
+
+  </header>
+
+
+
+  <main>
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section
+      class="hero" data-screen-label="Reservas — Hero">
+
+      <img
+        class="hero__image"
+        src="img/terraza.jpg"
+        alt="Terraza de Muscari con sillones rojos y lámparas de papel"
+      >
+
+      <div class="hero__overlay"></div>
+
+      <div class="hero__content">
+
+        <span class="eyebrow">
+          Reservaciones y eventos
+        </span>
+
+        <h1 class="hero__title">
+          Reserva<br>
+          tu momento
+        </h1>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SELECTOR
+    ========================== -->
+
+    <section
+      class="selector"
+      data-screen-label="Reservas — Selector"
+    >
+
+      <!-- MESA -->
+
+      <a
+        class="selector-card selector-card--mesa"
+        href="#mesa"
+      >
+
+        <img
+          class="selector-card__image"
+          src="img/salon-te.jpg"
+          alt=""
+        >
+
+        <div class="selector-card__content">
+
+          <span class="eyebrow">
+            01 · Mesa
+          </span>
+
+          <h2 class="selector-card__title">
+            Una mesa para compartir
+          </h2>
+
+          <p class="selector-card__text">
+            Encuentra el momento perfecto para disfrutar de Muscari.
+          </p>
+
+          <span class="selector-card__button">
+            Reservar mesa ↓
+          </span>
+
+        </div>
+
+      </a>
+
+
+      <!-- EVENTO -->
+
+      <a
+        class="selector-card selector-card--evento"
+        href="#evento"
+      >
+
+        <img
+          class="selector-card__image selector-card__image--evento"
+          src="img/jardin-hamaca.jpg"
+          alt=""
+        >
+
+        <div class="selector-card__content">
+
+          <span class="eyebrow">
+            02 · Evento
+          </span>
+
+          <h2 class="selector-card__title">
+            Un espacio para celebrar
+          </h2>
+
+          <p class="selector-card__text">
+            Organiza una experiencia especial en Muscari.
+          </p>
+
+          <span class="selector-card__button">
+            Organizar evento ↓
+          </span>
+
+        </div>
+
+      </a>
+
+    </section>
+
+
+    <!-- =========================
+         RESERVAR MESA
+    ========================== -->
+
+    <section id="mesa" class="reservation-section">
+
+      <div class="reservation-info reservation-info--sticky">
+
+        <span class="section-label section-label--terracotta">
+          01 · Reservar una mesa
+        </span>
+
+        <h2 class="section-title">
+          Una mesa para compartir
+        </h2>
+
+        <p class="section-description">
+          Elige el día y la hora en el calendario de Muscari.
+          La disponibilidad y la confirmación llegan directamente
+          desde Google Calendar.
+        </p>
+
+
+        <!-- PASOS -->
+
+        <ol class="steps">
+
+          <li class="steps__item">
+
+            <span class="steps__number">
+              01
+            </span>
+
+            <span>
+              Selecciona una fecha disponible.
+            </span>
+
+          </li>
+
+
+          <li class="steps__item">
+
+            <span class="steps__number">
+              02
+            </span>
+
+            <span>
+              Elige el horario que prefieras.
+            </span>
+
+          </li>
+
+
+          <li class="steps__item">
+
+            <span class="steps__number">
+              03
+            </span>
+
+            <span>
+              Completa tus datos y confirma la reserva.
+            </span>
+
+          </li>
+
+        </ol>
+
+
+        <div class="reservation-help">
+
+          <span>
+            Horario: lunes a sábado, 7:00 a.m. – 7:30 p.m.
+          </span>
+
+          <span>
+
+            ¿No carga el calendario?
+
+            <a
+              class="text-link text-link--terracotta"
+              href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ32_IWdo7S6swnHhVU4yeTxNlvN7qTmzqZwj4WdPY9DfFQkOGaq33JTDdn07I5WOysowEVEAxfb"
+              target="_blank"
+              rel="noopener"
+            >
+              Ábrelo en Google Calendar ↗
+            </a>
+
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- GOOGLE CALENDAR -->
+
+      <div class="embed-column">
+
+        <div class="embed-box embed-box--calendar">
+
+          <iframe
+            class="calendar-frame"
+            src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ32_IWdo7S6swnHhVU4yeTxNlvN7qTmzqZwj4WdPY9DfFQkOGaq33JTDdn07I5WOysowEVEAxfb?gv=true"
+            title="Reservar una mesa en Muscari — Google Calendar"
+            width="100%"
+            height="1080"
+            loading="lazy"
+          >
+            Cargando calendario de reservaciones…
+          </iframe>
+
+        </div>
+
+        <span class="embed-caption embed-caption--dark">
+          Servicio de reservas de Google Calendar
+        </span>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         EVENTOS
+    ========================== -->
+
+    <section
+      id="evento"
+      class="event-section"
+      data-screen-label="Reservas — Evento"
+    >
+
+      <div class="event-section__inner">
+
+
+        <!-- INFORMACIÓN -->
+
+        <div class="reservation-info reservation-info--sticky">
+
+          <span class="section-label section-label--light">
+            02 · Organizar un evento
+          </span>
+
+          <h2 class="section-title">
+            Un espacio para celebrar
+          </h2>
+
+          <p class="section-description section-description--light">
+            Cumpleaños, reuniones o encuentros especiales entre el jardín
+            y el salón. Cuéntanos qué imaginas y el equipo de Muscari se
+            pondrá en contacto contigo.
+          </p>
+
+
+
+
+          <span class="event-help">
+
+            ¿No carga el formulario?
+
+            <a
+              class="text-link text-link--light"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSco2Gbp21eDQjRBmW6Jm8Canebc2FEn5BtoxBMST_vroby5iA/viewform"
+              target="_blank"
+              rel="noopener"
+            >
+              Ábrelo en Google Forms ↗
+            </a>
+
+          </span>
+
+        </div>
+
+
+        <!-- GOOGLE FORMS -->
+
+        <div class="embed-column">
+
+          <div class="embed-box embed-box--form">
+
+            <iframe
+              class="form-frame"
+              src="https://docs.google.com/forms/d/e/1FAIpQLSco2Gbp21eDQjRBmW6Jm8Canebc2FEn5BtoxBMST_vroby5iA/viewform?embedded=true"
+              title="Solicitar organización de evento en Muscari"
+              width="100%"
+              height="1500"
+              loading="lazy"
+            >
+              Cargando formulario de eventos…
+            </iframe>
+
+          </div>
+
+          <span class="embed-caption embed-caption--light">
+            Formulario de Google Forms
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer class="footer">
+
+    <div class="footer__inner">
+
+      <div class="footer__grid">
+
+
+        <!-- MARCA -->
+
+        <div class="footer__brand">
+
+          <img
+            class="footer__logo"
+            src="assets/images/logo.jpg"
+            alt="Logotipo de Muscari"
+          >
+
+          <span class="footer__muted footer__uppercase">
+            Culte tea house and afters
+          </span>
+
+        </div>
+
+
+        <!-- HORARIO -->
+
+        <div class="footer__column">
+
+          <span class="footer__heading">
+            Horario
+          </span>
+
+          <span>
+            Lunes a sábado
+          </span>
+
+          <span>
+            7:00 a.m. – 7:30 p.m.
+          </span>
+
+          <span class="footer__muted">
+            San Salvador, El Salvador
+          </span>
+
+        </div>
+
+
+        <!-- NAVEGACIÓN -->
+
+        <div class="footer__column">
+
+          <span class="footer__heading">
+            Navegación
+          </span>
+
+          <a class="footer__link" href="Inicio.dc.html">
+            Inicio
+          </a>
+
+          <a class="footer__link" href="Menu.dc.html">
+            Menú
+          </a>
+
+          <a class="footer__link" href="Eventos.dc.html">
+            Eventos
+          </a>
+
+          <a class="footer__link" href="Reservas.dc.html">
+            Reservas
+          </a>
+
+        </div>
+
+
+        <!-- REDES -->
+
+        <div class="footer__column">
+
+          <span class="footer__heading">
+            Redes
+          </span>
+
+          <a
+            class="footer__link"
+            href="https://www.instagram.com/muscari.bistro/"
+            target="_blank"
+            rel="noopener"
+          >
+            Instagram — @muscari.bistro
+          </a>
+
+          <a
+            class="footer__link"
+            href="https://www.facebook.com/muscarisv/?locale=es_LA"
+            target="_blank"
+            rel="noopener"
+          >
+            Facebook — Muscari
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- PARTE INFERIOR -->
+
+      <div class="footer__bottom">
+
+        <span>
+          Bistro franco-japonais
+        </span>
+
+        <span>
+          © 2026 Muscari Bistro
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

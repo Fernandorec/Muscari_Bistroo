@@ -1,0 +1,780 @@
+/* =========================
+   ESTILOS GENERALES
+========================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background: #F2EBDF;
+  color: #2B241E;
+
+  font-family: Satoshi, "DM Sans", sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  position: relative;
+
+  min-height: max(64vh, 520px);
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-end;
+
+  background: #211C17;
+  color: #F2EBDF;
+}
+
+
+.hero__image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center 60%;
+
+  animation:
+    mZoom 8s cubic-bezier(.25, .46, .45, .94) both;
+}
+
+
+.hero__overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(33, 28, 23, .6) 0%,
+      rgba(33, 28, 23, .2) 40%,
+      rgba(33, 28, 23, .85) 100%
+    );
+}
+
+
+.hero__content {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+
+  padding:
+    0
+    clamp(20px, 4vw, 48px)
+    clamp(32px, 5vw, 56px);
+
+  animation:
+    mFade 1.2s .3s cubic-bezier(.25, .46, .45, .94) both;
+}
+
+
+.eyebrow {
+  font-size: 12px;
+
+  text-transform: uppercase;
+
+  letter-spacing: .14em;
+}
+
+
+.hero__title {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-weight: 300;
+
+  font-size: clamp(64px, 11vw, 170px);
+
+  line-height: .8;
+
+  letter-spacing: -.04em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================
+   SELECTOR
+========================= */
+
+.selector {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(min(100%, 420px), 1fr)
+    );
+}
+
+
+.selector-card {
+  position: relative;
+
+  min-height: 420px;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-end;
+
+  color: #F2EBDF;
+}
+
+
+.selector-card--mesa {
+  background: #211C17;
+}
+
+
+.selector-card--evento {
+  background: #4D5E3A;
+}
+
+
+.selector-card__image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  opacity: .55;
+
+  transition:
+    transform 1.2s cubic-bezier(.25, .46, .45, .94),
+    opacity .6s;
+}
+
+
+.selector-card:hover .selector-card__image {
+  transform: scale(1.05);
+
+  opacity: .7;
+}
+
+
+.selector-card__image--evento {
+  opacity: .4;
+
+  mix-blend-mode: luminosity;
+}
+
+
+.selector-card--evento:hover
+.selector-card__image--evento {
+  opacity: .55;
+}
+
+
+.selector-card__content {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+
+  padding: clamp(28px, 4vw, 48px);
+
+  pointer-events: none;
+}
+
+
+.selector-card__title {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-weight: 300;
+
+  font-size: clamp(44px, 5vw, 72px);
+
+  line-height: .88;
+
+  letter-spacing: -.03em;
+
+  text-transform: uppercase;
+}
+
+
+.selector-card__text {
+  max-width: 380px;
+
+  margin: 0;
+
+  font-size: 15px;
+
+  line-height: 1.5;
+}
+
+
+.selector-card__button {
+  align-self: flex-start;
+
+  padding: 16px 24px;
+
+  border: 1px solid #F2EBDF;
+
+  border-radius: 3px;
+
+  font-size: 13px;
+
+  text-transform: uppercase;
+
+  letter-spacing: .04em;
+}
+
+/* para que no se ponga negra el selector */
+
+.selector-card:hover {
+  color: #F2EBDF;
+}
+
+/* =========================
+   RESERVAR MESA
+========================= */
+
+.reservation-section {
+  scroll-margin-top: 0;
+
+  max-width: 1440px;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: flex-start;
+
+  gap:
+    48px
+    clamp(40px, 6vw, 96px);
+
+  padding:
+    clamp(88px, 11vw, 150px)
+    clamp(20px, 4vw, 48px);
+}
+
+
+.reservation-info {
+  flex: 1 1 320px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 28px;
+}
+
+
+.reservation-info--sticky {
+  position: sticky;
+
+  top: 32px;
+}
+
+
+.section-label {
+  font-size: 12px;
+
+  text-transform: uppercase;
+
+  letter-spacing: .14em;
+}
+
+
+.section-label--terracotta {
+  color: #B5613C;
+}
+
+
+.section-label--light {
+  color: #D9D3BC;
+}
+
+
+.section-title {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-weight: 300;
+
+  font-size: clamp(48px, 6vw, 90px);
+
+  line-height: .84;
+
+  letter-spacing: -.04em;
+
+  text-transform: uppercase;
+}
+
+
+.section-description {
+  max-width: 400px;
+
+  margin: 0;
+
+  color: #5A4636;
+
+  font-size: 15px;
+
+  line-height: 1.5;
+
+  text-wrap: pretty;
+}
+
+
+.section-description--light {
+  color: #E6DAC6;
+}
+
+
+/* =========================
+   PASOS DE RESERVA
+========================= */
+
+.steps {
+  margin: 0;
+
+  padding: 0;
+
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+
+  border-top: 1px solid #CDBFA8;
+}
+
+
+.steps__item {
+  display: grid;
+
+  grid-template-columns: 40px 1fr;
+
+  gap: 12px;
+
+  padding: 16px 0;
+
+  border-bottom: 1px solid #CDBFA8;
+
+  font-size: 14px;
+
+  line-height: 1.45;
+}
+
+
+.steps__number {
+  color: #B5613C;
+}
+
+
+.reservation-help {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+
+  color: #5A4636;
+
+  font-size: 13px;
+}
+
+
+/* =========================
+   LINKS
+========================= */
+
+.text-link {
+  border-bottom: 1px solid;
+}
+
+
+.text-link--terracotta {
+  color: #2B241E;
+
+  border-bottom-color: #B5613C;
+}
+
+
+.text-link--light {
+  color: #F2EBDF;
+
+  border-bottom-color: #F2EBDF;
+}
+
+
+/* =========================
+   IFRAMES / EMBEDS
+========================= */
+
+.embed-column {
+  flex: 2 1 560px;
+
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+
+.embed-box {
+  overflow: hidden;
+}
+
+
+.embed-box--calendar {
+  background: #FFFFFF;
+
+  border: 1px solid #CDBFA8;
+}
+
+
+.embed-box--form {
+  background: #F2EBDF;
+}
+
+
+.calendar-frame,
+.form-frame {
+  display: block;
+
+  width: 100%;
+
+  border: 0;
+}
+
+
+.calendar-frame {
+  height: 1080px;
+}
+
+
+.form-frame {
+  height: 1500px;
+}
+
+
+.embed-caption {
+  font-size: 12px;
+
+  text-transform: uppercase;
+
+  letter-spacing: .1em;
+}
+
+
+.embed-caption--dark {
+  color: #8A7A66;
+}
+
+
+.embed-caption--light {
+  color: #D9D3BC;
+}
+
+
+/* =========================
+   EVENTOS
+========================= */
+
+.event-section {
+  scroll-margin-top: 0;
+
+  background: #4D5E3A;
+
+  color: #F2EBDF;
+}
+
+
+.event-section__inner {
+  max-width: 1440px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: flex-start;
+
+  gap:
+    48px
+    clamp(40px, 6vw, 96px);
+
+  padding:
+    clamp(88px, 11vw, 150px)
+    clamp(20px, 4vw, 48px);
+}
+
+
+/* =========================
+   GALERÍA DE EVENTOS
+========================= */
+
+.event-gallery {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
+}
+
+
+.event-gallery__item {
+  overflow: hidden;
+
+  aspect-ratio: 3 / 4;
+}
+
+
+.event-gallery__item--offset {
+  margin-top: 40px;
+}
+
+
+.event-gallery__image {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 1.2s cubic-bezier(.25, .46, .45, .94);
+}
+
+
+.event-gallery__image--first {
+  object-position: 30% 45%;
+}
+
+
+.event-gallery__item:hover
+.event-gallery__image {
+  transform: scale(1.06);
+}
+
+
+.event-help {
+  color: #E6DAC6;
+
+  font-size: 13px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  background: #211C17;
+
+  color: #E6DAC6;
+}
+
+
+.footer__inner {
+  max-width: 1440px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 48px;
+
+  padding:
+    clamp(56px, 7vw, 88px)
+    clamp(20px, 4vw, 48px)
+    32px;
+}
+
+
+.footer__grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(min(100%, 200px), 1fr)
+    );
+
+  gap: 40px;
+}
+
+
+.footer__brand {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+
+.footer__logo {
+  width: 96px;
+
+  height: 96px;
+
+  border-radius: 50%;
+}
+
+
+.footer__column {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  font-size: 14px;
+}
+
+
+.footer__heading {
+  color: #B5A994;
+
+  font-size: 12px;
+
+  text-transform: uppercase;
+
+  letter-spacing: .14em;
+}
+
+
+.footer__muted {
+  color: #B5A994;
+}
+
+
+.footer__uppercase {
+  font-size: 12px;
+
+  text-transform: uppercase;
+
+  letter-spacing: .12em;
+}
+
+
+.footer__link {
+  transition: color .3s;
+}
+
+
+.footer__link:hover {
+  color: #B5613C;
+}
+
+
+.footer__bottom {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+
+  gap: 12px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid #3A322A;
+
+  color: #B5A994;
+
+  font-size: 12px;
+
+  text-transform: uppercase;
+
+  letter-spacing: .1em;
+}
+
+
+/* =========================
+   ACCESIBILIDAD
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+
+    transition: none !important;
+
+    scroll-behavior: auto !important;
+  }
+
+}
+
+/* =========================
+   RESPONSIVE - TELÉFONO
+========================= */
+
+@media (max-width: 768px) {
+
+  .reservation-section {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .reservation-info--sticky {
+    position: static;
+    width: 100%;
+  }
+
+  .embed-column {
+    width: 100%;
+  }
+
+}
