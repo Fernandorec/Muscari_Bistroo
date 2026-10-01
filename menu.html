@@ -1,0 +1,967 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Menú — Muscari Bistro</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap"
+        rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@500,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="Inicio.html" class="header_logo">MUSCARI</a>
+
+        <nav class="header_nav">
+            <a href="Inicio.html" class="nav_link">Inicio</a>
+            <a href="Menu.html" class="nav_link nav_link_activo">Menú</a>
+            <a href="Eventos.html" class="nav_link">Eventos</a>
+            <a href="Reservas.html" class="nav_link">Reservas</a>
+        </nav>
+
+        <a href="Reservas.html#mesa" class="boton_reservar">Reservar mesa</a>
+    </header>
+
+    <main>
+
+        <section class="menu-hero">
+            <img src="img/cafe-frio.jpg" alt="Muscari Bistro" class="menu-hero__image">
+            <div class="menu-hero__overlay"></div>
+
+            <div class="menu-hero__content">
+                <div class="menu-hero__title-group">
+                    <span class="eyebrow">Menú gastronómico</span>
+                    <h1 class="menu-hero__title">La carte</h1>
+                </div>
+
+                <p class="menu-hero__description">
+                    Café, té y cocina de bistró franco-japonés, servidos entre el jardín y el salón.
+                </p>
+            </div>
+        </section>
+
+        <nav aria-label="Categorías del menú" class="category-nav">
+            <div class="category-nav__inner">
+                <a href="#crepes" class="category-nav__link">Crêpes</a>
+                <a href="#brunch" class="category-nav__link">Brunch</a>
+                <a href="#apero" class="category-nav__link">Apéro-dinner</a>
+                <a href="#desserts" class="category-nav__link">Desserts</a>
+                <a href="#cafe" class="category-nav__link">Café</a>
+                <a href="#boissons" class="category-nav__link">Boissons signature</a>
+                <a href="#te" class="category-nav__link">Le jardin de thé</a>
+            </div>
+        </nav>
+
+        <div class="notice-wrapper">
+            <div role="note" class="demo-notice">
+                <span class="demo-notice__title">Omakase Bistro · « Estás en buenas manos »</span>
+                <span class="demo-notice__text">
+                    El savoir-vivre francés se encuentra con el alma japonesa del omakase.
+                    Una cocina de fusión franco-japonesa donde cada plato se sirve con intuición,
+                    cuidado y el placer de vivir bien.
+                </span>
+            </div>
+        </div>
+
+        <section id="crepes" class="menu-category">
+            <div class="menu-category__heading">
+                <span class="menu-category__number">01</span>
+                <h2 class="menu-category__title">Crêpes</h2>
+                <p class="menu-category__intro">toute la journée</p>
+            </div>
+
+            <div class="menu-list">
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/01-Crêpe Forestière.png" alt="Crêpe Forestière" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Crêpes · NOUVEAU</span>
+                        <h3 class="menu-item__name">Crêpe Forestière</h3>
+                        <p class="menu-item__description">Champiñones, salsa blanca al café y
+                            ensalada.<br><em>Mushrooms, coffee cream sauce &amp; salad.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">12.90</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/04-Crêpe Tropicale.jpeg" alt="Crêpe Tropicale" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Crêpes · NOUVEAU</span>
+                        <h3 class="menu-item__name">Crêpe Tropicale</h3>
+                        <p class="menu-item__description">Melocotón, yogurt de arándanos y sorbete.<br><em>Peach,
+                                blueberry yogurt &amp; sorbet.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">6.90</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/02-Crêpe suzette.jpeg" alt="Crêpe Suzette" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Crêpes</span>
+                        <h3 class="menu-item__name">Crêpe Suzette</h3>
+                        <p class="menu-item__description">Mantequilla, azúcar caramelizada, caramelo salado y
+                            sorbete.<br><em>Butter, caramelized sugar, salted caramel &amp; sorbet.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">5.50</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/05-Crêpe nutella.jpeg" alt="Crêpe Nutella" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Crêpes</span>
+                        <h3 class="menu-item__name">Crêpe Nutella</h3>
+                        <p class="menu-item__description">Nutella® y sorbete.<br><em>Nutella® &amp; sorbet.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">5.90</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/03-Crêpe Pommes Caramel.jpeg" alt="Crêpe Pommes Caramel" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Crêpes · NOUVEAU</span>
+                        <h3 class="menu-item__name">Crêpe Pommes Caramel</h3>
+                        <p class="menu-item__description">Manzana caramelizada y sorbete.<br><em>Caramelized apple &amp;
+                                sorbet.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">6.90</span>
+                </article>
+
+                <div class="demo-notice" style="margin-top:20px;">
+                    <span class="demo-notice__title">Opciones</span>
+                    <span class="demo-notice__text">Opciones: Banano +$0.60 · Fresa +$0.85 · Fresa &amp; Banano +$1.00.
+                        Extras disponibles.</span>
+                </div>
+            </div>
+        </section>
+        <section id="brunch" class="menu-category">
+            <div class="menu-category__heading">
+                <span class="menu-category__number">02</span>
+                <h2 class="menu-category__title">Brunch</h2>
+                <p class="menu-category__intro">toute la journée</p>
+            </div>
+
+            <div class="menu-list">
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/06-Croissant Shimeji Chapudo.png" alt="Croissant Shimeji Chapudo" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Brunch</span>
+                        <h3 class="menu-item__name">Croissant Shimeji Chapudo</h3>
+                        <p class="menu-item__description">Crema de champiñones al café, frijoles, aguacate y
+                            huevo.<br><em>Coffee mushroom cream, beans, avocado &amp; egg.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">9.90</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/10-Cottage Maitake.png" alt="Cottage Maitake" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Brunch</span>
+                        <h3 class="menu-item__name">Cottage Maitake</h3>
+                        <p class="menu-item__description">Pan masa madre, cottage, aguacate, huevo y
+                            maitake.<br><em>Sourdough, cottage cheese, avocado, egg &amp; maitake.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">9.90</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/07-TOKYO MATIN.png" alt="Tokyo matin" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Brunch</span>
+                        <h3 class="menu-item__name">Tokyo matin</h3>
+                        <p class="menu-item__description">Pancakes con Miel, mantequilla de la casa y
+                            tocino.<br><em>Honey pancakes, butter &amp; bacon.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">9.90</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/11-Muscari tipico.png" alt="Muscari Típico" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Brunch</span>
+                        <h3 class="menu-item__name">Muscari Típico</h3>
+                        <p class="menu-item__description">Huevos, frijoles, plátano, crema, salsa y pan
+                            francés.<br><em>Eggs, beans, plantain, cream, salsa &amp; French bread.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">9.90</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/08-FRENCH TOASTS.jpg" alt="French Toasts" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Brunch</span>
+                        <h3 class="menu-item__name">French Toasts</h3>
+                        <p class="menu-item__description">Tostada a la francesa con miel y frutas de
+                            temporada.<br><em>Honey &amp; seasonal fruit.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">9.90</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/12-Croissant Maison.png" alt="Croissant Maison" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Brunch · NOUVEAU</span>
+                        <h3 class="menu-item__name">Croissant Maison</h3>
+                        <p class="menu-item__description">Huevo, salchicha, mozzarella y alioli. Ensalada o papas
+                            baby.<br><em>Egg, sausage, mozzarella &amp; aioli. Salad or baby potatoes.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">12.90</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/09-AMAKARA TOAST.png" alt="Amakara toast" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Brunch · NOUVEAU</span>
+                        <h3 class="menu-item__name">Amakara toast</h3>
+                        <p class="menu-item__description">Pan brioche, huevo pochado, tocino y caramelo.<br><em>Brioche,
+                                poached egg, bacon &amp; caramel.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">9.90</span>
+                </article>
+
+            </div>
+        </section>
+        <section id="apero" class="menu-category">
+            <div class="menu-category__heading">
+                <span class="menu-category__number">03</span>
+                <h2 class="menu-category__title">Apéro-dinner</h2>
+                <p class="menu-category__intro">à partager</p>
+            </div>
+
+            <div class="menu-list">
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/13-Hummus.png" alt="Hummus" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Apéro-dinner</span>
+                        <h3 class="menu-item__name">Hummus</h3>
+                        <p class="menu-item__description">Hummus casero con pan pita.<br><em>House hummus with pita
+                                bread.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">9.90</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/17-Seta descalza.png" alt="Seta Descalza" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Apéro-dinner</span>
+                        <h3 class="menu-item__name">Seta Descalza</h3>
+                        <p class="menu-item__description">Pan masa madre con hummus, alfalfa, tomate y
+                            champiñones.<br><em>Sourdough with hummus, alfalfa, tomato &amp; mushrooms.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">9.90</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/14-Tostada Jamón Serrano.png" alt="Tostada Jamón Serrano" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Apéro-dinner</span>
+                        <h3 class="menu-item__name">Tostada Jamón Serrano</h3>
+                        <p class="menu-item__description">Masa madre, pesto, jamón serrano, tomate cherry y
+                            cottage.<br><em>Sourdough, pesto, serrano ham, cherry tomato &amp; cottage.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">12.90</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/18-Crema Champiñones.png" alt="Crema Champiñones" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Apéro-dinner · NOUVEAU</span>
+                        <h3 class="menu-item__name">Crema Champiñones</h3>
+                        <p class="menu-item__description">Crema de champiñones, queso, tocino y hierbas.<br><em>Mushroom
+                                cream, cheese, bacon &amp; herbs.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">9.90</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/15-Origami Morí.png" alt="Origami Morí" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Apéro-dinner</span>
+                        <h3 class="menu-item__name">Origami Morí</h3>
+                        <p class="menu-item__description">Papel de arroz, salmón, berenjena y aguacate.<br><em>Rice
+                                paper, salmon, eggplant &amp; avocado.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">12.90</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/19-Salade saumon.png" alt="Salade Saumon" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Apéro-dinner</span>
+                        <h3 class="menu-item__name">Salade Saumon</h3>
+                        <p class="menu-item__description">Lechugas, salmón, quinoa, hongos y tomate
+                            cherry.<br><em>Greens, salmon, quinoa, mushrooms &amp; cherry tomato.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">12.90</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/15-Muscari burger.png" alt="Muscari Burger" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Apéro-dinner · NOUVEAU</span>
+                        <h3 class="menu-item__name">Muscari Burger</h3>
+                        <p class="menu-item__description">Res, tocino, muenster, aguacate, cebolla caramelizada y
+                            arúgula. Papas fritas.<br><em>Beef, bacon, muenster, avocado, caramelized onion &amp;
+                                arugula. Fries.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">14.90</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/20-Amanita sorpresa.png" alt="Amanita Sorpresa" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Apéro-dinner</span>
+                        <h3 class="menu-item__name">Amanita Sorpresa</h3>
+                        <p class="menu-item__description">Creación del chef. Déjate sorprender.<br><em>Chef&#x27;s
+                                creation. Let yourself be surprised.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">15.90</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/16-Me da Kosa Ke se Akabe.png" alt="Me da Kosa Ke se Akabe" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Apéro-dinner</span>
+                        <h3 class="menu-item__name">Me da Kosa Ke se Akabe</h3>
+                        <p class="menu-item__description">Tataki de res, hummus de edamame y alfalfa frita.<br><em>Beef
+                                tataki, edamame hummus &amp; fried alfalfa.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">18.90</span>
+                </article>
+
+            </div>
+        </section>
+        <section id="desserts" class="menu-category">
+            <div class="menu-category__heading">
+                <span class="menu-category__number">04</span>
+                <h2 class="menu-category__title">Desserts</h2>
+                <p class="menu-category__intro">la note sucrée</p>
+            </div>
+
+            <div class="menu-list">
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/21-Dried fruit.png" alt="Dried Fruit" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Desserts</span>
+                        <h3 class="menu-item__name">Dried Fruit</h3>
+                        <p class="menu-item__description">Fruta deshidratada.<br><em>Dehydrated fruit.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">3.00</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/27-Galleta chocolate.jpg" alt="Chocolat Cookie" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Desserts</span>
+                        <h3 class="menu-item__name">Chocolat Cookie</h3>
+                        <p class="menu-item__description">Galleta de mantequilla con chispas de chocolate.<br><em>Butter
+                                cookie with chocolate chips.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">3.90</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/22-Panna Cotta.png" alt="Panna Cotta" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Desserts</span>
+                        <h3 class="menu-item__name">Panna Cotta</h3>
+                        <p class="menu-item__description">Yogurt griego con salsa de arándanos.<br><em>Greek yogurt with
+                                blueberry sauce.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">4.50</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/28-Tartelette aux fruits .png" alt="Tartelette aux Fruits" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Desserts</span>
+                        <h3 class="menu-item__name">Tartelette aux Fruits</h3>
+                        <p class="menu-item__description">Tartaleta de frutos de temporada.<br><em>Seasonal fruit
+                                tartlet.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">4.50</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/Créme de la créme .png" alt="Crème de la Crème" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Desserts</span>
+                        <h3 class="menu-item__name">Crème de la Crème</h3>
+                        <p class="menu-item__description">Croissant, sorbete, jalea de fresa, lotus y
+                            caramelo.<br><em>Croissant, sorbet, strawberry jam, lotus &amp; caramel.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">4.90</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/29-Cheesecake.jpg" alt="Cheesecake" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Desserts</span>
+                        <h3 class="menu-item__name">Cheesecake</h3>
+                        <p class="menu-item__description">Nutella o frutos rojos.<br><em>Nutella or red berries.</em>
+                        </p>
+                    </div>
+
+                    <span class="menu-item__price">5.50</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/24-Mousse chocolat.png" alt="Mousse Chocolat" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Desserts</span>
+                        <h3 class="menu-item__name">Mousse Chocolat</h3>
+                        <p class="menu-item__description">Base de chocolate con oreo, o frutos rojos con
+                            cocoa.<br><em>Chocolate-oreo base, or red berries with cocoa.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">5.50</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/30-Tiramisu.jpeg" alt="Tiramisu" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Desserts</span>
+                        <h3 class="menu-item__name">Tiramisu</h3>
+                        <p class="menu-item__description">Café, mascarpone y suspiros.<br><em>Coffee, mascarpone &amp;
+                                meringue.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">5.50</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/25-Flambé Amaterasu .png" alt="Flambé Amaterasu" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Desserts</span>
+                        <h3 class="menu-item__name">Flambé Amaterasu</h3>
+                        <p class="menu-item__description">Crème brûlée de naranja, flambeada en mesa.<br><em>Orange
+                                crème brûlée, flambéed tableside.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">5.90</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/31-Brownie.png" alt="Brownie" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Desserts</span>
+                        <h3 class="menu-item__name">Brownie</h3>
+                        <p class="menu-item__description">Brownie de chocolate con sorbete.<br><em>Chocolate brownie
+                                with sorbet.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">5.90</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/26-Croissant Le petit péché.png" alt="Le Petit Péché" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Desserts</span>
+                        <h3 class="menu-item__name">Le Petit Péché</h3>
+                        <p class="menu-item__description">Croissant tibio, Nutella, fresa, banano y sorbete.<br><em>Warm
+                                croissant, Nutella, strawberry, banana &amp; sorbet.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">5.90</span>
+                </article>
+
+            </div>
+        </section>
+        <section id="cafe" class="menu-category">
+            <div class="menu-category__heading">
+                <span class="menu-category__number">05</span>
+                <h2 class="menu-category__title">Café · le comptoir</h2>
+                <p class="menu-category__intro">珈琲</p>
+            </div>
+
+            <div class="menu-list">
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/32-AMERICANO.png" alt="Americano" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Café</span>
+                        <h3 class="menu-item__name">Americano</h3>
+                        <p class="menu-item__description">8 oz · 12 oz $3.50</p>
+                    </div>
+
+                    <span class="menu-item__price">2.75</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/37-CAPUCHINO.png" alt="Cappuccino" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Café</span>
+                        <h3 class="menu-item__name">Cappuccino</h3>
+                        <p class="menu-item__description"></p>
+                    </div>
+
+                    <span class="menu-item__price">4.00</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/33-HOT LATTE.png" alt="Hot Coffee Latte" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Café</span>
+                        <h3 class="menu-item__name">Hot Coffee Latte</h3>
+                        <p class="menu-item__description"></p>
+                    </div>
+
+                    <span class="menu-item__price">3.50</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/38-ICED LATTE.png" alt="Iced Latte" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Café</span>
+                        <h3 class="menu-item__name">Iced Latte</h3>
+                        <p class="menu-item__description"></p>
+                    </div>
+
+                    <span class="menu-item__price">5.00</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/34-ORANGE EXPRESSO.png" alt="Orange Espresso" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Café</span>
+                        <h3 class="menu-item__name">Orange Espresso</h3>
+                        <p class="menu-item__description">Naranja y espresso.<br><em>Orange &amp; espresso.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">5.90</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/39.1-TARO LATTE.png" alt="Latte du jour" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Café</span>
+                        <h3 class="menu-item__name">Latte du jour</h3>
+                        <p class="menu-item__description">Taro · Blue Chai · Matcha.</p>
+                    </div>
+
+                    <span class="menu-item__price">5.50</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/35-CHOCOLATE CALIENTE.png" alt="Chocolate" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Café</span>
+                        <h3 class="menu-item__name">Chocolate</h3>
+                        <p class="menu-item__description">Chocolate caliente.<br><em>Hot chocolate.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">3.50</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/40-TEA JAR FOR 1.png" alt="Thé maison" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Café</span>
+                        <h3 class="menu-item__name">Thé maison</h3>
+                        <p class="menu-item__description">Tea for 1</p>
+                    </div>
+
+                    <span class="menu-item__price">4.50</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/36-TEA JAR FOR 4.png" alt="Thé pour 4" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Café</span>
+                        <h3 class="menu-item__name">Thé pour 4</h3>
+                        <p class="menu-item__description">Tea Jar for 4</p>
+                    </div>
+
+                    <span class="menu-item__price">9.00</span>
+                </article>
+
+            </div>
+        </section>
+        <section id="boissons" class="menu-category">
+            <div class="menu-category__heading">
+                <span class="menu-category__number">06</span>
+                <h2 class="menu-category__title">Boissons signature</h2>
+                <p class="menu-category__intro">ドリンク</p>
+            </div>
+
+            <div class="menu-list">
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/41-HOLA Amor.png" alt="Hola Amor" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Boissons signature</span>
+                        <h3 class="menu-item__name">Hola Amor</h3>
+                        <p class="menu-item__description">Té Hola Amor, limonada y jalea de fresa.<br><em>Hola Amor tea,
+                                lemonade &amp; strawberry jam.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">6.50</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/47-Matcha Fresa.png" alt="Matcha Fresa" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Boissons signature</span>
+                        <h3 class="menu-item__name">Matcha Fresa</h3>
+                        <p class="menu-item__description">Matcha con jalea de fresa.<br><em>Matcha with strawberry
+                                jam.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">6.50</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/42-AMATIS TARO.png" alt="Amatis Taro" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Boissons signature</span>
+                        <h3 class="menu-item__name">Amatis Taro</h3>
+                        <p class="menu-item__description">Taro con arándano.<br><em>Taro with blueberry.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">6.50</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/48-RUSSULA MATCHA (1).png" alt="Russula Matcha" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Boissons signature</span>
+                        <h3 class="menu-item__name">Russula Matcha</h3>
+                        <p class="menu-item__description">Matcha y mermelada de calabaza.<br><em>Matcha &amp;
+                                pumpkin.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">6.50</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/43-ODORA CHAI.png" alt="Odora Chai" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Boissons signature</span>
+                        <h3 class="menu-item__name">Odora Chai</h3>
+                        <p class="menu-item__description">Vanilla latte y blue chai.<br><em>Vanilla latte &amp; blue
+                                chai.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">6.50</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/49-MATCHA MORRO.png" alt="Matcha Morro" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Boissons signature · NOUV.</span>
+                        <h3 class="menu-item__name">Matcha Morro</h3>
+                        <p class="menu-item__description">Horchata de morro, matcha y cold foam.<br><em>Caramelized
+                                plantain, morro horchata, matcha &amp; cold foam.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">6.50</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/44-AMORE Mio.png"  alt="Amore Mio" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Boissons signature · NOUV.</span>
+                        <h3 class="menu-item__name">Amore Mio</h3>
+                        <p class="menu-item__description">Jalea de fresa, naranja e hibisco.<br><em>Strawberry jam,
+                                orange &amp; hibiscus.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">6.50</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/50-Butterfly TEA.png" alt="Butterfly Tea" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Boissons signature · NOUV.</span>
+                        <h3 class="menu-item__name">Butterfly Tea</h3>
+                        <p class="menu-item__description">Maracuyá, limonada, agua con gas y blue chai.<br><em>Passion
+                                fruit, lemonade, sparkling water &amp; blue chai.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">6.50</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/45-BLACK MAGIC.png" alt="Black Magic" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Boissons signature</span>
+                        <h3 class="menu-item__name">Black Magic</h3>
+                        <p class="menu-item__description">Naranja, Black Magic y arándanos.<br><em>Orange, Black Magic
+                                &amp; blueberries.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">5.90</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/51-Flirt BERRY.png" alt="Flirt Berry" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Boissons signature</span>
+                        <h3 class="menu-item__name">Flirt Berry</h3>
+                        <p class="menu-item__description">Naranja y té Bali.<br><em>Orange &amp; Bali tea.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">5.90</span>
+                </article>
+                <article class="menu-item">
+                    <div class="menu-item__media">
+                        <!-- Cambiá esta imagen por la fotografía real del producto -->
+                        <img src="img/46-BLOOM lemonade.png" alt="Bloom Lemonade" class="menu-item__image">
+                    </div>
+
+                    <div class="menu-item__content">
+                        <span class="menu-item__meta">Boissons signature · NOUV.</span>
+                        <h3 class="menu-item__name">Bloom Lemonade</h3>
+                        <p class="menu-item__description">Infusión de buganvilia y limonada.<br><em>Bougainvillea
+                                infusion &amp; lemonade.</em></p>
+                    </div>
+
+                    <span class="menu-item__price">4.50</span>
+                </article>
+
+            </div>
+        </section>
+        <section class="menu-cta">
+            <h2 class="menu-cta__title">Ven a probarlo<br>en el jardín</h2>
+
+            <div class="menu-cta__actions">
+                <a href="Reservas.html#mesa" class="btn btn--dark">Reservar mesa</a>
+                <a href="Eventos.html" class="btn btn--outline">Ver eventos</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__grid">
+
+                <div class="footer-brand">
+                    <img src="img/logo.jpg" alt="Logotipo de Muscari" class="footer-logo">
+                    <span class="footer-tagline">Culte tea house and afters</span>
+                </div>
+
+                <div class="footer-column">
+                    <span class="footer-column__title">Horario</span>
+                    <span>Lunes a sábado</span>
+                    <span>7:00 a.m. – 7:30 p.m.</span>
+                    <span class="footer-muted">San Salvador, El Salvador</span>
+                </div>
+
+                <div class="footer-column">
+                    <span class="footer-column__title">Navegación</span>
+                    <a href="Inicio.html" class="footer-link">Inicio</a>
+                    <a href="Menu.html" class="footer-link">Menú</a>
+                    <a href="Eventos.html" class="footer-link">Eventos</a>
+                    <a href="Reservas.html" class="footer-link">Reservas</a>
+                </div>
+
+                <div class="footer-column">
+                    <span class="footer-column__title">Redes</span>
+                    <a href="https://www.instagram.com/muscari.bistro/" target="_blank" rel="noopener"
+                        class="footer-link">Instagram — @muscari.bistro</a>
+                    <a href="https://www.facebook.com/muscarisv/?locale=es_LA" target="_blank" rel="noopener"
+                        class="footer-link">Facebook — Muscari</a>
+                </div>
+
+            </div>
+
+            <div class="site-footer__bottom">
+                <span>Bistro franco-japonais</span>
+                <span>© 2026 Muscari Bistro</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
