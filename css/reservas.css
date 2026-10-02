@@ -1,7 +1,36 @@
+
 /* =========================
    ESTILOS GENERALES
    MOBILE FIRST
 ========================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background: #F2EBDF;
+  color: #2B241E;
+
+  font-family: Satoshi, "DM Sans", sans-serif;
+
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
 
 
 /* =========================
@@ -10,15 +39,42 @@
 ========================= */
 
 .hero {
+  position: relative;
+
   min-height: max(64vh, 520px);
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  background: #211C17;
+  color: #F2EBDF;
 }
 
 .hero__image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
   object-position: center 60%;
+
+  animation:
+    mZoom 8s cubic-bezier(.25, .46, .45, .94) both;
 }
 
 .hero__overlay {
-  background: linear-gradient(
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
       180deg,
       rgba(33, 28, 23, .6) 0%,
       rgba(33, 28, 23, .2) 40%,
@@ -27,11 +83,20 @@
 }
 
 .hero__content {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
   gap: 20px;
-  padding: 0
+
+  padding:
+    0
     clamp(20px, 4vw, 48px)
     clamp(32px, 5vw, 56px);
-  animation: mFade 1.2s .3s cubic-bezier(.25, .46, .45, .94) both;
+
+  animation:
+    mFade 1.2s .3s cubic-bezier(.25, .46, .45, .94) both;
 }
 
 .eyebrow {
@@ -515,10 +580,25 @@
    MOBILE
 ========================= */
 
+.footer {
+  background: #211C17;
+
+  color: #E6DAC6;
+}
 
 .footer__inner {
+  max-width: 1440px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  flex-direction: column;
+
   gap: 48px;
-  padding: 56px
+
+  padding:
+    56px
     20px
     32px;
 }
@@ -533,6 +613,10 @@
 }
 
 .footer__brand {
+  display: flex;
+
+  flex-direction: column;
+
   gap: 18px;
 }
 
@@ -554,6 +638,19 @@
   font-size: 14px;
 }
 
+.footer__heading {
+  color: #B5A994;
+
+  font-size: 12px;
+
+  text-transform: uppercase;
+
+  letter-spacing: .14em;
+}
+
+.footer__muted {
+  color: #B5A994;
+}
 
 .footer__uppercase {
   font-size: 12px;
@@ -567,13 +664,28 @@
   transition: color .3s;
 }
 
+.footer__link:hover {
+  color: #B5613C;
+}
 
 .footer__bottom {
   display: flex;
+
   flex-direction: column;
+
   gap: 12px;
+
   padding-top: 20px;
+
+  border-top: 1px solid #3A322A;
+
+  color: #B5A994;
+
   font-size: 12px;
+
+  text-transform: uppercase;
+
+  letter-spacing: .1em;
 }
 
 
@@ -582,7 +694,7 @@
    769px EN ADELANTE
 ========================= */
 
-@media (min-width: 769px) {
+@media (min-width: 1036px) {
 
   /* =====================
      SELECTOR
@@ -658,7 +770,8 @@
   ===================== */
 
   .footer__inner {
-    padding: clamp(56px, 7vw, 88px)
+    padding:
+      clamp(56px, 7vw, 88px)
       clamp(20px, 4vw, 48px)
       32px;
   }
@@ -673,7 +786,9 @@
 
   .footer__bottom {
     flex-direction: row;
+
     flex-wrap: wrap;
+
     justify-content: space-between;
   }
 
@@ -683,3 +798,17 @@
 /* =========================
    ACCESIBILIDAD
 ========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+
+    transition: none !important;
+
+    scroll-behavior: auto !important;
+  }
+
+}
