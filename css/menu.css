@@ -68,6 +68,7 @@ img {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -155,12 +156,10 @@ img {
 .menu-hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(33, 28, 23, .55) 0%,
-    rgba(33, 28, 23, .15) 40%,
-    rgba(33, 28, 23, .85) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(33, 28, 23, .55) 0%,
+      rgba(33, 28, 23, .15) 40%,
+      rgba(33, 28, 23, .85) 100%);
 }
 
 .menu-hero__content {
@@ -297,6 +296,10 @@ img {
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  position: sticky;
+  top: 80px;
+  align-self: flex-start;
 }
 
 .menu-category__number {
@@ -366,11 +369,9 @@ img {
 
 .menu-item__placeholder {
   aspect-ratio: 4 / 5;
-  background: repeating-linear-gradient(
-    135deg,
-    #E6DAC6 0 6px,
-    #EDE3D3 6px 12px
-  );
+  background: repeating-linear-gradient(135deg,
+      #E6DAC6 0 6px,
+      #EDE3D3 6px 12px);
   display: flex;
   align-items: center;
   justify-content: center;
