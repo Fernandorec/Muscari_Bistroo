@@ -2,81 +2,10 @@
    BASE — MOBILE FIRST
    ========================= */
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  background: #F2EBDF;
-  color: #2B241E;
-  font-family: Satoshi, 'DM Sans', sans-serif;
-  -webkit-font-smoothing: antialiased;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-a:hover {
-  color: inherit;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
 
 /* =========================
    ANIMACIONES
    ========================= */
-
-@keyframes mFade {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-@keyframes mZoom {
-  from {
-    transform: scale(1.12);
-  }
-
-  to {
-    transform: scale(1);
-  }
-}
-
-@keyframes mReveal {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-
-  *,
-  *::before,
-  *::after {
-    animation: none !important;
-    transition: none !important;
-    scroll-behavior: auto !important;
-  }
-}
 
 
 /* =========================
@@ -84,26 +13,6 @@ img {
    Clases conservadas por compatibilidad
    ========================= */
 
-.brand {
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: .25em;
-}
-
-.main-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 16px;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: .04em;
-}
-
-.nav-link {
-  padding-bottom: 4px;
-  border-bottom: 1px solid transparent;
-  transition: border-color .4s;
-}
 
 .nav-link:hover {
   border-bottom-color: #F2EBDF;
@@ -113,50 +22,20 @@ img {
   border-bottom-color: #B5613C;
 }
 
-.header-reserve-btn {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: .04em;
-  padding: 10px 14px;
-  border: 1px solid #F2EBDF;
-  border-radius: 3px;
-  transition: background .4s, color .4s;
-}
-
-.header-reserve-btn:hover {
-  background: #F2EBDF;
-  color: #211C17;
-}
-
 
 /* =========================
    HERO
    ========================= */
 
 .menu-hero {
-  position: relative;
   min-height: 520px;
-  overflow: hidden;
-  background: #211C17;
-  color: #F2EBDF;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
 }
 
 .menu-hero__image {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
   object-position: center 55%;
-  animation: mZoom 8s cubic-bezier(.25, .46, .45, .94) both;
 }
 
 .menu-hero__overlay {
-  position: absolute;
-  inset: 0;
   background: linear-gradient(180deg,
       rgba(33, 28, 23, .58) 0%,
       rgba(33, 28, 23, .18) 38%,
@@ -164,10 +43,7 @@ img {
 }
 
 .menu-hero__content {
-  position: relative;
   padding: 0 20px 32px;
-  display: flex;
-  flex-direction: column;
   align-items: flex-start;
   gap: 22px;
 }
@@ -518,21 +394,6 @@ img {
 
 @media (min-width: 768px) {
 
-  .brand {
-    font-size: 15px;
-    letter-spacing: .32em;
-  }
-
-  .main-nav {
-    gap: 8px 24px;
-    font-size: 12px;
-  }
-
-  .header-reserve-btn {
-    font-size: 12px;
-    padding: 12px 18px;
-  }
-
 
   /* HERO */
 
@@ -542,7 +403,6 @@ img {
 
   .menu-hero__content {
     padding: 0 32px 44px;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-end;
@@ -701,16 +561,6 @@ img {
    ========================================================= */
 
 @media (min-width: 1100px) {
-
-  .main-nav {
-    gap: 8px 28px;
-    font-size: 13px;
-  }
-
-  .header-reserve-btn {
-    font-size: 13px;
-    padding: 14px 22px;
-  }
 
 
   /* HERO */

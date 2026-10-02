@@ -1,37 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap');
+
 /* ========================================
    HEADER
    MOBILE FIRST
 ======================================== */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #F2EBDF;
+  color: #2B241E;
+  font-family: Satoshi, "DM Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent
+}
+
+a:hover {
+  color: inherit
+}
+
+img {
+  display: block;
+  max-width: 100%
+}
 
 .header {
-  position: absolute;
-
-  top: 0;
-  left: 0;
-  right: 0;
-
-  z-index: 10;
-
-  display: flex;
   flex-wrap: wrap;
-
   align-items: center;
   justify-content: space-between;
-
   gap: 12px 16px;
-
   padding: 20px;
-
-  color: #F2EBDF;
-
   animation: mFade 1s;
 }
 
-.header_logo {
+.header_logo,
+.a-1 {
   font-size: 15px;
-
   font-weight: 700;
-
   letter-spacing: 0.32em;
 }
 
@@ -49,11 +64,10 @@
   letter-spacing: 0.04em;
 }
 
-.nav_link {
+.nav_link,
+.a-3 {
   padding-bottom: 4px;
-
   border-bottom: 1px solid transparent;
-
   transition: border-color 0.4s;
 }
 
@@ -61,25 +75,20 @@
   border-bottom-color: #F2EBDF;
 }
 
-.nav_link_activo {
+.nav_link_activo,
+.a-2 {
   border-bottom-color: #B5613C;
 }
 
-.boton_reservar {
+.boton_reservar,
+.a-4 {
   padding: 14px 22px;
-
   font-size: 13px;
-
   text-transform: uppercase;
-
   letter-spacing: 0.04em;
-
   border: 1px solid #F2EBDF;
-
   border-radius: 3px;
-
-  transition:
-    background 0.4s,
+  transition: background 0.4s,
     color 0.4s;
 }
 
@@ -98,9 +107,7 @@
 
   .header {
     gap: 16px 32px;
-
-    padding:
-      24px clamp(20px, 4vw, 48px);
+    padding: 24px clamp(20px, 4vw, 48px);
   }
 
   .header_nav {
@@ -172,21 +179,142 @@
 }
 
 
-/* =========================
-   FOOTER
-   ========================= */
+/* ========================================
+   COMPONENTES COMPARTIDOS ENTRE PÁGINAS
+======================================== */
 
-.site-footer {
+/* Header: estructura común entre el header general y el de Inicio */
+.header,
+.header-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  color: #F2EBDF;
+}
+
+/* Hero: base compartida por Inicio, Menú, Eventos y Reservas */
+.hero,
+.menu-hero,
+.seccion-hero {
+  position: relative;
+  overflow: hidden;
+  background: #211C17;
+  color: #F2EBDF;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.hero_imagen,
+.hero__image,
+.menu-hero__image,
+.img-1 {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: mZoom 8s cubic-bezier(.25, .46, .45, .94) both;
+}
+
+.hero_overlay,
+.hero__overlay,
+.menu-hero__overlay,
+.div-1 {
+  position: absolute;
+  inset: 0;
+}
+
+.hero_contenido,
+.hero__content,
+.menu-hero__content,
+.div-2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer: estructura y apariencia realmente compartidas */
+.site-footer,
+.footer,
+.footer-1 {
   background: #211C17;
   color: #E6DAC6;
 }
 
-.site-footer__inner {
+.site-footer__inner,
+.footer_contenedor,
+.footer__inner,
+.div-32 {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 52px 20px 28px;
   display: flex;
   flex-direction: column;
+}
+
+.footer-brand,
+.footer_logo,
+.footer__brand,
+.div-34 {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-column__title,
+.footer_titulo,
+.footer__heading {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  color: #B5A994;
+}
+
+.footer-muted,
+.footer_secundario,
+.footer__muted,
+.span-12 {
+  color: #B5A994;
+}
+
+.footer-link:hover,
+.footer_columna a:hover,
+.footer__link:hover,
+.a-11:hover {
+  color: #B5613C;
+}
+
+.site-footer__bottom,
+.footer_inferior,
+.footer__bottom,
+.div-37 {
+  border-top: 1px solid #3A322A;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: #B5A994;
+}
+
+/* Accesibilidad compartida */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+
+.site-footer__inner {
+  padding: 52px 20px 28px;
   gap: 40px;
 }
 
@@ -197,8 +325,6 @@
 }
 
 .footer-brand {
-  display: flex;
-  flex-direction: column;
   gap: 16px;
 }
 
@@ -222,35 +348,18 @@
   font-size: 13px;
 }
 
-.footer-column__title {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: .14em;
-  color: #B5A994;
-}
-
-.footer-muted {
-  color: #B5A994;
-}
 
 .footer-link {
   transition: color .4s;
 }
 
-.footer-link:hover {
-  color: #B5613C;
-}
 
 .site-footer__bottom {
   display: flex;
   flex-direction: column;
   gap: 8px;
   padding-top: 18px;
-  border-top: 1px solid #3A322A;
   font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  color: #B5A994;
 }
 
 /* =========================================================
@@ -300,9 +409,7 @@
   }
 
   .footer-tagline,
-  .footer-column__title {
-    font-size: 12px;
-  }
+
 
   .footer-column {
     font-size: 14px;
