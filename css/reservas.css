@@ -1,5 +1,7 @@
+
 /* =========================
    ESTILOS GENERALES
+   MOBILE FIRST
 ========================= */
 
 html {
@@ -14,7 +16,6 @@ body {
 
   font-family: Satoshi, "DM Sans", sans-serif;
 
-  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -32,9 +33,9 @@ img {
 }
 
 
-
 /* =========================
    HERO
+   MOBILE
 ========================= */
 
 .hero {
@@ -46,13 +47,11 @@ img {
 
   display: flex;
   flex-direction: column;
-
   justify-content: flex-end;
 
   background: #211C17;
   color: #F2EBDF;
 }
-
 
 .hero__image {
   position: absolute;
@@ -63,13 +62,11 @@ img {
   height: 100%;
 
   object-fit: cover;
-
   object-position: center 60%;
 
   animation:
     mZoom 8s cubic-bezier(.25, .46, .45, .94) both;
 }
-
 
 .hero__overlay {
   position: absolute;
@@ -84,7 +81,6 @@ img {
       rgba(33, 28, 23, .85) 100%
     );
 }
-
 
 .hero__content {
   position: relative;
@@ -103,7 +99,6 @@ img {
     mFade 1.2s .3s cubic-bezier(.25, .46, .45, .94) both;
 }
 
-
 .eyebrow {
   font-size: 12px;
 
@@ -111,7 +106,6 @@ img {
 
   letter-spacing: .14em;
 }
-
 
 .hero__title {
   margin: 0;
@@ -132,18 +126,15 @@ img {
 
 /* =========================
    SELECTOR
+   MOBILE
 ========================= */
 
 .selector {
   display: grid;
 
-  grid-template-columns:
-    repeat(
-      auto-fit,
-      minmax(min(100%, 420px), 1fr)
-    );
+  /* En móvil: una columna */
+  grid-template-columns: 1fr;
 }
-
 
 .selector-card {
   position: relative;
@@ -160,16 +151,13 @@ img {
   color: #F2EBDF;
 }
 
-
 .selector-card--mesa {
   background: #211C17;
 }
 
-
 .selector-card--evento {
   background: #4D5E3A;
 }
-
 
 .selector-card__image {
   position: absolute;
@@ -188,13 +176,11 @@ img {
     opacity .6s;
 }
 
-
 .selector-card:hover .selector-card__image {
   transform: scale(1.05);
 
   opacity: .7;
 }
-
 
 .selector-card__image--evento {
   opacity: .4;
@@ -202,12 +188,10 @@ img {
   mix-blend-mode: luminosity;
 }
 
-
 .selector-card--evento:hover
 .selector-card__image--evento {
   opacity: .55;
 }
-
 
 .selector-card__content {
   position: relative;
@@ -221,7 +205,6 @@ img {
 
   pointer-events: none;
 }
-
 
 .selector-card__title {
   margin: 0;
@@ -239,7 +222,6 @@ img {
   text-transform: uppercase;
 }
 
-
 .selector-card__text {
   max-width: 380px;
 
@@ -249,7 +231,6 @@ img {
 
   line-height: 1.5;
 }
-
 
 .selector-card__button {
   align-self: flex-start;
@@ -267,14 +248,15 @@ img {
   letter-spacing: .04em;
 }
 
-/* para que no se ponga negra el selector */
-
+/* Evita que el texto se vuelva negro al hacer hover */
 .selector-card:hover {
   color: #F2EBDF;
 }
 
+
 /* =========================
    RESERVAR MESA
+   MOBILE
 ========================= */
 
 .reservation-section {
@@ -285,36 +267,37 @@ img {
   margin: 0 auto;
 
   display: flex;
-  flex-wrap: wrap;
+
+  /* Mobile First:
+     información arriba,
+     calendario abajo */
+  flex-direction: column;
 
   align-items: flex-start;
 
-  gap:
-    48px
-    clamp(40px, 6vw, 96px);
+  gap: 50px;
 
   padding:
-    clamp(88px, 11vw, 150px)
-    clamp(20px, 4vw, 48px);
+    88px
+    20px;
 }
 
-
 .reservation-info {
-  flex: 1 1 320px;
+  width: 100%;
 
   display: flex;
   flex-direction: column;
 
   gap: 28px;
+
+  /* Importante para evitar desbordamiento */
+  box-sizing: border-box;
 }
 
-
+/* En móvil NO queremos sticky */
 .reservation-info--sticky {
-  position: sticky;
-
-  top: 32px;
+  position: static;
 }
-
 
 .section-label {
   font-size: 12px;
@@ -324,16 +307,13 @@ img {
   letter-spacing: .14em;
 }
 
-
 .section-label--terracotta {
   color: #B5613C;
 }
 
-
 .section-label--light {
   color: #D9D3BC;
 }
-
 
 .section-title {
   margin: 0;
@@ -351,7 +331,6 @@ img {
   text-transform: uppercase;
 }
 
-
 .section-description {
   max-width: 400px;
 
@@ -366,7 +345,6 @@ img {
   text-wrap: pretty;
 }
 
-
 .section-description--light {
   color: #E6DAC6;
 }
@@ -377,6 +355,8 @@ img {
 ========================= */
 
 .steps {
+  width: 100%;
+
   margin: 0;
 
   padding: 0;
@@ -387,8 +367,9 @@ img {
   flex-direction: column;
 
   border-top: 1px solid #CDBFA8;
-}
 
+  box-sizing: border-box;
+}
 
 .steps__item {
   display: grid;
@@ -406,11 +387,9 @@ img {
   line-height: 1.45;
 }
 
-
 .steps__number {
   color: #B5613C;
 }
-
 
 .reservation-help {
   display: flex;
@@ -433,13 +412,11 @@ img {
   border-bottom: 1px solid;
 }
 
-
 .text-link--terracotta {
   color: #2B241E;
 
   border-bottom-color: #B5613C;
 }
-
 
 .text-link--light {
   color: #F2EBDF;
@@ -450,25 +427,27 @@ img {
 
 /* =========================
    IFRAMES / EMBEDS
+   MOBILE
 ========================= */
 
 .embed-column {
-  flex: 2 1 560px;
+  width: 100%;
 
   min-width: 0;
 
   display: flex;
-
   flex-direction: column;
 
   gap: 12px;
 }
 
-
 .embed-box {
-  overflow: hidden;
-}
+  width: 100%;
 
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
 
 .embed-box--calendar {
   background: #FFFFFF;
@@ -476,11 +455,9 @@ img {
   border: 1px solid #CDBFA8;
 }
 
-
 .embed-box--form {
   background: #F2EBDF;
 }
-
 
 .calendar-frame,
 .form-frame {
@@ -491,16 +468,13 @@ img {
   border: 0;
 }
 
-
 .calendar-frame {
   height: 1080px;
 }
 
-
 .form-frame {
   height: 1500px;
 }
-
 
 .embed-caption {
   font-size: 12px;
@@ -510,11 +484,9 @@ img {
   letter-spacing: .1em;
 }
 
-
 .embed-caption--dark {
   color: #8A7A66;
 }
-
 
 .embed-caption--light {
   color: #D9D3BC;
@@ -523,6 +495,7 @@ img {
 
 /* =========================
    EVENTOS
+   MOBILE
 ========================= */
 
 .event-section {
@@ -533,7 +506,6 @@ img {
   color: #F2EBDF;
 }
 
-
 .event-section__inner {
   max-width: 1440px;
 
@@ -541,17 +513,16 @@ img {
 
   display: flex;
 
-  flex-wrap: wrap;
+  /* Mobile First */
+  flex-direction: column;
 
   align-items: flex-start;
 
-  gap:
-    48px
-    clamp(40px, 6vw, 96px);
+  gap: 50px;
 
   padding:
-    clamp(88px, 11vw, 150px)
-    clamp(20px, 4vw, 48px);
+    88px
+    20px;
 }
 
 
@@ -567,18 +538,15 @@ img {
   gap: 12px;
 }
 
-
 .event-gallery__item {
   overflow: hidden;
 
   aspect-ratio: 3 / 4;
 }
 
-
 .event-gallery__item--offset {
   margin-top: 40px;
 }
-
 
 .event-gallery__image {
   width: 100%;
@@ -591,17 +559,14 @@ img {
     transform 1.2s cubic-bezier(.25, .46, .45, .94);
 }
 
-
 .event-gallery__image--first {
   object-position: 30% 45%;
 }
-
 
 .event-gallery__item:hover
 .event-gallery__image {
   transform: scale(1.06);
 }
-
 
 .event-help {
   color: #E6DAC6;
@@ -612,6 +577,7 @@ img {
 
 /* =========================
    FOOTER
+   MOBILE
 ========================= */
 
 .footer {
@@ -619,7 +585,6 @@ img {
 
   color: #E6DAC6;
 }
-
 
 .footer__inner {
   max-width: 1440px;
@@ -633,24 +598,19 @@ img {
   gap: 48px;
 
   padding:
-    clamp(56px, 7vw, 88px)
-    clamp(20px, 4vw, 48px)
+    56px
+    20px
     32px;
 }
-
 
 .footer__grid {
   display: grid;
 
-  grid-template-columns:
-    repeat(
-      auto-fit,
-      minmax(min(100%, 200px), 1fr)
-    );
+  /* Una columna en móvil */
+  grid-template-columns: 1fr;
 
   gap: 40px;
 }
-
 
 .footer__brand {
   display: flex;
@@ -660,7 +620,6 @@ img {
   gap: 18px;
 }
 
-
 .footer__logo {
   width: 96px;
 
@@ -668,7 +627,6 @@ img {
 
   border-radius: 50%;
 }
-
 
 .footer__column {
   display: flex;
@@ -680,7 +638,6 @@ img {
   font-size: 14px;
 }
 
-
 .footer__heading {
   color: #B5A994;
 
@@ -691,11 +648,9 @@ img {
   letter-spacing: .14em;
 }
 
-
 .footer__muted {
   color: #B5A994;
 }
-
 
 .footer__uppercase {
   font-size: 12px;
@@ -705,23 +660,18 @@ img {
   letter-spacing: .12em;
 }
 
-
 .footer__link {
   transition: color .3s;
 }
-
 
 .footer__link:hover {
   color: #B5613C;
 }
 
-
 .footer__bottom {
   display: flex;
 
-  flex-wrap: wrap;
-
-  justify-content: space-between;
+  flex-direction: column;
 
   gap: 12px;
 
@@ -740,6 +690,112 @@ img {
 
 
 /* =========================
+   TABLET / DESKTOP
+   769px EN ADELANTE
+========================= */
+
+@media (min-width: 769px) {
+
+  /* =====================
+     SELECTOR
+  ===================== */
+
+  .selector {
+    grid-template-columns:
+      repeat(
+        auto-fit,
+        minmax(min(100%, 420px), 1fr)
+      );
+  }
+
+
+  /* =====================
+     RESERVAR MESA
+  ===================== */
+
+  .reservation-section {
+    flex-direction: row;
+
+    flex-wrap: wrap;
+
+    gap:
+      48px
+      clamp(40px, 6vw, 96px);
+
+    padding:
+      clamp(88px, 11vw, 150px)
+      clamp(20px, 4vw, 48px);
+  }
+
+  .reservation-info {
+    width: auto;
+
+    flex: 1 1 320px;
+  }
+
+  .reservation-info--sticky {
+    position: sticky;
+
+    top: 32px;
+  }
+
+  .embed-column {
+    width: auto;
+
+    flex: 2 1 560px;
+  }
+
+
+  /* =====================
+     EVENTOS
+  ===================== */
+
+  .event-section__inner {
+    flex-direction: row;
+
+    flex-wrap: wrap;
+
+    gap:
+      48px
+      clamp(40px, 6vw, 96px);
+
+    padding:
+      clamp(88px, 11vw, 150px)
+      clamp(20px, 4vw, 48px);
+  }
+
+
+  /* =====================
+     FOOTER
+  ===================== */
+
+  .footer__inner {
+    padding:
+      clamp(56px, 7vw, 88px)
+      clamp(20px, 4vw, 48px)
+      32px;
+  }
+
+  .footer__grid {
+    grid-template-columns:
+      repeat(
+        auto-fit,
+        minmax(min(100%, 200px), 1fr)
+      );
+  }
+
+  .footer__bottom {
+    flex-direction: row;
+
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+  }
+
+}
+
+
+/* =========================
    ACCESIBILIDAD
 ========================= */
 
@@ -753,28 +809,6 @@ img {
     transition: none !important;
 
     scroll-behavior: auto !important;
-  }
-
-}
-
-/* =========================
-   RESPONSIVE - TELÉFONO
-========================= */
-
-@media (max-width: 768px) {
-
-  .reservation-section {
-    flex-direction: column;
-    gap: 50px;
-  }
-
-  .reservation-info--sticky {
-    position: static;
-    width: 100%;
-  }
-
-  .embed-column {
-    width: 100%;
   }
 
 }
