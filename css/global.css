@@ -1,4 +1,3 @@
-
 /* ========================================
    HEADER
    MOBILE FIRST
@@ -101,8 +100,7 @@
     gap: 16px 32px;
 
     padding:
-      24px
-      clamp(20px, 4vw, 48px);
+      24px clamp(20px, 4vw, 48px);
   }
 
   .header_nav {
@@ -171,4 +169,146 @@
     opacity: 0.35;
   }
 
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.site-footer {
+  background: #211C17;
+  color: #E6DAC6;
+}
+
+.site-footer__inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 52px 20px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.site-footer__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-logo {
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+}
+
+.footer-tagline {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: #B5A994;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  font-size: 13px;
+}
+
+.footer-column__title {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  color: #B5A994;
+}
+
+.footer-muted {
+  color: #B5A994;
+}
+
+.footer-link {
+  transition: color .4s;
+}
+
+.footer-link:hover {
+  color: #B5613C;
+}
+
+.site-footer__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 18px;
+  border-top: 1px solid #3A322A;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: #B5A994;
+}
+
+/* =========================================================
+   TABLET — 768px EN ADELANTE
+   Aquí activamos el sticky de los títulos de categoría
+   ========================================================= */
+
+@media (min-width: 768px) {
+  /* FOOTER */
+
+  .site-footer__inner {
+    padding: 64px 32px 30px;
+  }
+
+  .site-footer__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 36px;
+  }
+
+  .site-footer__bottom {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+/* =========================================================
+   ESCRITORIO — 1100px EN ADELANTE
+   ========================================================= */
+
+@media (min-width: 1100px) {
+  /* FOOTER */
+
+  .site-footer__inner {
+    padding: 80px 48px 32px;
+    gap: 48px;
+  }
+
+  .site-footer__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 40px;
+  }
+
+  .footer-logo {
+    width: 96px;
+    height: 96px;
+  }
+
+  .footer-tagline,
+  .footer-column__title {
+    font-size: 12px;
+  }
+
+  .footer-column {
+    font-size: 14px;
+  }
+
+  .site-footer__bottom {
+    font-size: 12px;
+  }
 }
