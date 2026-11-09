@@ -1,0 +1,256 @@
+/* =========================================================
+   FORMULARIOS PROPIOS (reservas.html y eventos.html)
+   Reemplazan los iframes de Google Calendar / Google Forms.
+   Se carga después de reservas.css / eventos.css.
+   MOBILE FIRST
+========================================================= */
+
+.reservation-form {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+
+  box-sizing: border-box;
+}
+
+.form-row {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 20px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.form-field--narrow {
+  max-width: 220px;
+}
+
+.form-field label {
+  font-size: 12px;
+
+  text-transform: uppercase;
+
+  letter-spacing: .1em;
+
+  color: #5A4636;
+}
+
+.form-field__optional {
+  text-transform: none;
+
+  letter-spacing: 0;
+
+  color: #8A7A66;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+
+  padding: 10px 2px;
+
+  background: transparent;
+
+  border: 0;
+  border-bottom: 1px solid #CDBFA8;
+  border-radius: 0;
+
+  font-family: inherit;
+  font-size: 15px;
+  color: #2B241E;
+
+  box-sizing: border-box;
+
+  transition: border-color .3s;
+}
+
+.form-field textarea {
+  resize: vertical;
+
+  min-height: 64px;
+}
+
+.form-field select {
+  appearance: none;
+
+  background-image:
+    url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%235A4636' d='M3.5 5.5l4.5 4.5 4.5-4.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 2px center;
+  background-size: 14px;
+
+  padding-right: 22px;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: none;
+
+  border-bottom-color: #B5613C;
+}
+
+.form-footer {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 14px;
+}
+
+.form-submit {
+  align-self: flex-start;
+
+  padding: 16px 28px;
+
+  border-radius: 3px;
+
+  background: transparent;
+
+  font-family: inherit;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+
+  cursor: pointer;
+
+  transition:
+    background .4s,
+    color .4s,
+    opacity .3s;
+}
+
+.form-submit--dark {
+  border: 1px solid #2B241E;
+
+  color: #2B241E;
+}
+
+.form-submit--dark:hover {
+  background: #2B241E;
+
+  color: #F2EBDF;
+}
+
+.form-submit--light {
+  border: 1px solid #F2EBDF;
+
+  color: #F2EBDF;
+}
+
+.form-submit--light:hover {
+  background: #F2EBDF;
+
+  color: #211C17;
+}
+
+.form-submit[disabled] {
+  opacity: .55;
+
+  cursor: default;
+}
+
+.form-status {
+  margin: 0;
+
+  min-height: 18px;
+
+  font-size: 13px;
+
+  line-height: 1.4;
+}
+
+.form-status[data-state="success"] {
+  color: #4D5E3A;
+}
+
+.form-status[data-state="error"] {
+  color: #B5613C;
+}
+
+
+/* =========================
+   VARIANTE CLARA
+   (sección verde de eventos en reservas.html)
+========================= */
+
+.reservation-form--light .form-field label {
+  color: #E6DAC6;
+}
+
+.reservation-form--light .form-field__optional {
+  color: #C8BFA0;
+}
+
+.reservation-form--light .form-field input,
+.reservation-form--light .form-field select,
+.reservation-form--light .form-field textarea {
+  color: #F2EBDF;
+
+  border-bottom-color: #6E7C5B;
+}
+
+.reservation-form--light .form-field select {
+  background-image:
+    url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23F2EBDF' d='M3.5 5.5l4.5 4.5 4.5-4.5'/%3E%3C/svg%3E");
+}
+
+.reservation-form--light .form-field select option {
+  color: #2B241E;
+}
+
+.reservation-form--light .form-field input:focus,
+.reservation-form--light .form-field select:focus,
+.reservation-form--light .form-field textarea:focus {
+  border-bottom-color: #F2EBDF;
+}
+
+.reservation-form--light .form-status[data-state="success"] {
+  color: #D9E4C8;
+}
+
+
+/* =========================
+   INSCRIPCIÓN (eventos.html)
+   Tarjeta con padding, ya que antes el iframe
+   traía su propio espaciado.
+========================= */
+
+.formulario--propio {
+  padding: clamp(24px, 3vw, 40px);
+}
+
+
+/* =========================
+   ESCRITORIO
+   Formulario centrado verticalmente respecto
+   a la columna de texto de la izquierda.
+========================= */
+
+@media (min-width: 1038px) {
+
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .reservation-section,
+  .event-section__inner {
+    align-items: center;
+  }
+
+  .inscripcion_contenedor {
+    align-items: center;
+  }
+}
