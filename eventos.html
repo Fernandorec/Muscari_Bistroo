@@ -13,6 +13,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/eventos.css">
+  <link rel="stylesheet" href="css/formularios.css">
 
   <script src="./support.js"></script>
 </head>
@@ -403,14 +404,7 @@
 
 
           <span class="formulario_alternativo">
-
-            ¿No carga el formulario?
-
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf8iLP17JuvLEd459_gVXyWYNK_f1VdSPoKC08mq8SPLgz3tQ/viewform"
-              target="_blank" rel="noopener">
-              Ábrelo en Google Forms ↗
-            </a>
-
+            Te confirmaremos tu lugar por correo o teléfono.
           </span>
 
         </div>
@@ -418,19 +412,58 @@
 
         <div class="formulario_contenedor">
 
-          <div class="formulario">
+          <form class="reservation-form formulario formulario--propio" id="form-inscripcion" data-reservation-form
+            data-reservation-type="inscripcion" novalidate>
 
-            <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSf8iLP17JuvLEd459_gVXyWYNK_f1VdSPoKC08mq8SPLgz3tQ/viewform?embedded=true"
-              title="Inscripción a eventos de Muscari" width="100%" height="1300" loading="lazy">
-              Cargando formulario…
-            </iframe>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="inscripcion-nombre">Nombre completo</label>
+                <input type="text" id="inscripcion-nombre" name="nombre" autocomplete="name" required />
+              </div>
 
-          </div>
+              <div class="form-field">
+                <label for="inscripcion-telefono">Teléfono</label>
+                <input type="tel" id="inscripcion-telefono" name="telefono" autocomplete="tel" required />
+              </div>
+            </div>
 
-          <span class="formulario_etiqueta">
-            Formulario de Google Forms
-          </span>
+            <div class="form-field">
+              <label for="inscripcion-correo">Correo electrónico</label>
+              <input type="email" id="inscripcion-correo" name="correo" autocomplete="email" required />
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="inscripcion-evento">Evento</label>
+                <select id="inscripcion-evento" name="evento" required>
+                  <option value="" disabled selected>Selecciona un evento</option>
+                  <option value="Taller de pintura">Taller de pintura · 6 de Oct</option>
+                  <option value="Tarde de té con pintura">Tarde de té con pintura · 8 de Oct</option>
+                  <option value="Mercado Navideño">Mercado Navideño · 31 de Oct</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="inscripcion-personas">Número de personas</label>
+                <input type="number" id="inscripcion-personas" name="personas" min="1" max="20" step="1"
+                  inputmode="numeric" required />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="inscripcion-comentarios">Comentarios <span class="form-field__optional">(opcional)</span></label>
+              <textarea id="inscripcion-comentarios" name="comentarios" rows="3"></textarea>
+            </div>
+
+            <div class="form-footer">
+              <button type="submit" class="form-submit form-submit--dark">
+                Enviar inscripción
+              </button>
+
+              <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+            </div>
+
+          </form>
 
         </div>
 
@@ -514,6 +547,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="js/formularios.js"></script>
 
 </body>
 

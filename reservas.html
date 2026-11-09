@@ -11,6 +11,7 @@
 
   <link rel="stylesheet" href="css/global.css" />
   <link rel="stylesheet" href="css/reservas.css" />
+  <link rel="stylesheet" href="css/formularios.css" />
 </head>
 
 <body>
@@ -108,9 +109,9 @@
         <h2 class="section-title">Una mesa para compartir</h2>
 
         <p class="section-description">
-          Elige el día y la hora en el calendario de Muscari. La
-          disponibilidad y la confirmación llegan directamente desde Google
-          Calendar.
+          Completa el formulario con el día y la hora que prefieras. La
+          disponibilidad y la confirmación de tu mesa llegan directamente de
+          parte del equipo de Muscari.
         </p>
 
         <!-- PASOS -->
@@ -119,13 +120,13 @@
           <li class="steps__item">
             <span class="steps__number"> 01 </span>
 
-            <span> Selecciona una fecha disponible. </span>
+            <span> Elige la fecha y la hora que prefieras. </span>
           </li>
 
           <li class="steps__item">
             <span class="steps__number"> 02 </span>
 
-            <span> Elige el horario que prefieras. </span>
+            <span> Indica cuántas personas los acompañan. </span>
           </li>
 
           <li class="steps__item">
@@ -139,31 +140,62 @@
           <span> Horario: lunes a sábado, 7:00 a.m. – 7:30 p.m. </span>
 
           <span>
-            ¿No carga el calendario?
-
-            <a class="text-link text-link--terracotta"
-              href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ32_IWdo7S6swnHhVU4yeTxNlvN7qTmzqZwj4WdPY9DfFQkOGaq33JTDdn07I5WOysowEVEAxfb"
-              target="_blank" rel="noopener">
-              Ábrelo en Google Calendar ↗
-            </a>
+            Te confirmamos por correo o teléfono en cuanto recibamos tu solicitud.
           </span>
         </div>
       </div>
 
-      <!-- GOOGLE CALENDAR -->
+      <!-- FORMULARIO DE RESERVA DE MESA -->
 
       <div class="embed-column">
-        <div class="embed-box embed-box--calendar">
-          <iframe class="calendar-frame"
-            src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ32_IWdo7S6swnHhVU4yeTxNlvN7qTmzqZwj4WdPY9DfFQkOGaq33JTDdn07I5WOysowEVEAxfb?gv=true"
-            title="Reservar una mesa en Muscari — Google Calendar" width="100%" height="1080" loading="lazy">
-            Cargando calendario de reservaciones…
-          </iframe>
-        </div>
+        <form class="reservation-form" id="form-mesa" data-reservation-form data-reservation-type="mesa" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="mesa-nombre">Nombre completo</label>
+              <input type="text" id="mesa-nombre" name="nombre" autocomplete="name" required />
+            </div>
 
-        <span class="embed-caption embed-caption--dark">
-          Servicio de reservas de Google Calendar
-        </span>
+            <div class="form-field">
+              <label for="mesa-telefono">Teléfono</label>
+              <input type="tel" id="mesa-telefono" name="telefono" autocomplete="tel" required />
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="mesa-correo">Correo electrónico</label>
+            <input type="email" id="mesa-correo" name="correo" autocomplete="email" required />
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="mesa-fecha">Fecha</label>
+              <input type="date" id="mesa-fecha" name="fecha" required />
+            </div>
+
+            <div class="form-field">
+              <label for="mesa-hora">Hora</label>
+              <input type="time" id="mesa-hora" name="hora" min="07:00" max="19:30" required />
+            </div>
+          </div>
+
+          <div class="form-field form-field--narrow">
+            <label for="mesa-personas">Número de personas</label>
+            <input type="number" id="mesa-personas" name="personas" min="1" max="20" step="1" inputmode="numeric" required />
+          </div>
+
+          <div class="form-field">
+            <label for="mesa-comentarios">Comentarios <span class="form-field__optional">(opcional)</span></label>
+            <textarea id="mesa-comentarios" name="comentarios" rows="3"></textarea>
+          </div>
+
+          <div class="form-footer">
+            <button type="submit" class="form-submit form-submit--dark">
+              Enviar solicitud de reserva
+            </button>
+
+            <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+          </div>
+        </form>
       </div>
     </section>
 
@@ -189,30 +221,67 @@
           </p>
 
           <span class="event-help">
-            ¿No carga el formulario?
-
-            <a class="text-link text-link--light"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSco2Gbp21eDQjRBmW6Jm8Canebc2FEn5BtoxBMST_vroby5iA/viewform"
-              target="_blank" rel="noopener">
-              Ábrelo en Google Forms ↗
-            </a>
+            Te contactaremos en un plazo de 24 a 48 horas para confirmar los detalles.
           </span>
         </div>
 
-        <!-- GOOGLE FORMS -->
+        <!-- FORMULARIO DE SOLICITUD DE EVENTO -->
 
         <div class="embed-column">
-          <div class="embed-box embed-box--form">
-            <iframe class="form-frame"
-              src="https://docs.google.com/forms/d/e/1FAIpQLSco2Gbp21eDQjRBmW6Jm8Canebc2FEn5BtoxBMST_vroby5iA/viewform?embedded=true"
-              title="Solicitar organización de evento en Muscari" width="100%" height="1500" loading="lazy">
-              Cargando formulario de eventos…
-            </iframe>
-          </div>
+          <form class="reservation-form reservation-form--light" id="form-evento" data-reservation-form data-reservation-type="evento" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="evento-nombre">Nombre completo</label>
+                <input type="text" id="evento-nombre" name="nombre" autocomplete="name" required />
+              </div>
 
-          <span class="embed-caption embed-caption--light">
-            Formulario de Google Forms
-          </span>
+              <div class="form-field">
+                <label for="evento-telefono">Teléfono</label>
+                <input type="tel" id="evento-telefono" name="telefono" autocomplete="tel" required />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="evento-correo">Correo electrónico</label>
+              <input type="email" id="evento-correo" name="correo" autocomplete="email" required />
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="evento-tipo">Tipo de evento</label>
+                <select id="evento-tipo" name="tipoEvento" required>
+                  <option value="" disabled selected>Selecciona una opción</option>
+                  <option value="Cumpleaños">Cumpleaños</option>
+                  <option value="Reunión">Reunión</option>
+                  <option value="Celebración especial">Celebración especial</option>
+                  <option value="Otro">Otro</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="evento-fecha">Fecha tentativa</label>
+                <input type="date" id="evento-fecha" name="fecha" required />
+              </div>
+            </div>
+
+            <div class="form-field form-field--narrow">
+              <label for="evento-invitados">Número de invitados</label>
+              <input type="number" id="evento-invitados" name="invitados" min="1" max="200" step="1" inputmode="numeric" required />
+            </div>
+
+            <div class="form-field">
+              <label for="evento-mensaje">Cuéntanos qué imaginas</label>
+              <textarea id="evento-mensaje" name="mensaje" rows="4" required></textarea>
+            </div>
+
+            <div class="form-footer">
+              <button type="submit" class="form-submit form-submit--light">
+                Enviar solicitud de evento
+              </button>
+
+              <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+            </div>
+          </form>
         </div>
       </div>
     </section>
@@ -262,6 +331,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="js/formularios.js"></script>
 </body>
 
 </html>
