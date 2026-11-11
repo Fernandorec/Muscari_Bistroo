@@ -31,6 +31,23 @@
     invalid: "Revisa los campos marcados antes de continuar.",
   };
 
+  // Teléfono: solo dígitos, máximo 8 (8 exactos para ser válido).
+  var TELEFONO_LARGO = 8;
+  var REGEX_NO_DIGITOS = /\D/g;
+  var REGEX_TELEFONO = /^\d{8}$/;
+
+  function limpiarTelefono(input) {
+    var limpio = input.value.replace(REGEX_NO_DIGITOS, "").slice(0, TELEFONO_LARGO);
+
+    if (input.value !== limpio) input.value = limpio;
+
+    input.setCustomValidity(
+      limpio === "" || REGEX_TELEFONO.test(limpio)
+        ? ""
+        : "El teléfono debe tener 8 dígitos, solo números."
+    );
+  }
+
   function formToPayload(form, type) {
     var data = new FormData(form);
     var payload = { tipo: type };
@@ -140,6 +157,14 @@
   function init() {
     document.querySelectorAll("[data-reservation-form]").forEach(function (form) {
       form.addEventListener("submit", handleSubmit);
+
+      var telefono = form.querySelector('input[name="telefono"]');
+      if (telefono) {
+        telefono.addEventListener("input", function () { limpiarTelefono(telefono); });
+        telefono.addEventListener("paste", function () {
+          setTimeout(function () { limpiarTelefono(telefono); }, 0);
+        });
+      }
     });
   }
 
